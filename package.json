@@ -18,6 +18,8 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
