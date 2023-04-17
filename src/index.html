@@ -17,16 +17,20 @@
             name="search-form"
             role="search"
           >
-            <div class="input-wrap">
+            <div class="search-form__input-wrap">
               <input
-                class="search-input form-control"
+                class="search-form__input form-control"
                 type="search"
                 name="searchQuery"
                 autocomplete="off"
                 placeholder="Search images..."
                 aria-label="Search"
               />
-              <button class="search-button" type="submit" name="searchButton">
+              <button
+                class="search-form__button"
+                type="submit"
+                name="searchButton"
+              >
                 <svg width="20" height="20" viewBox="0 0 20 20">
                   <path
                     d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
@@ -44,29 +48,15 @@
       </nav>
     </header>
     <main class="container container-sm container-md container-lg">
-      <ul class="card-set gallery">
-        <li class="card-set__item">
-          <div class="card">
-            <img
-              src="./images/logo.png"
-              class="card-img-top"
-              alt="Image"
-              loading="lazy"
-              width="150"
-            />
-            <div class="card-body">
-              <p class="card-text"><b>Likes:</b> 100</p>
-              <p class="card-text"><b>Views:</b> 500</p>
-              <p class="card-text"><b>Comments:</b> 20</p>
-              <p class="card-text"><b>Downloads:</b> 50</p>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <ul class="card-set gallery"></ul>
 
       <!--      Button load more with spinner-->
-      <div class="d-flex justify-content-center load-more visually-hidden">
-        <button class="btn btn-primary" type="button" disabled>
+      <div class="d-flex justify-content-center">
+        <button
+          class="btn btn-primary load-more visually-hidden"
+          type="button"
+          disabled
+        >
           <span
             class="spinner-border spinner-border-sm"
             role="status"
