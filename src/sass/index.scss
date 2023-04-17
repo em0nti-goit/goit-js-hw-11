@@ -1,15 +1,13 @@
 //@import '../../node_modules/modern-normalize/modern-normalize.css';
 // Import all of Bootstrap's CSS
-@import "~bootstrap/scss/bootstrap";
-@import "card-set";
+@import '~bootstrap/scss/bootstrap';
+@import 'variable';
+@import 'resets';
+@import 'card-set';
 
-root {
-  /* card-set */
-  --items: 4;
-  --indent: 30px;
-}
 .header {
   background-color: $indigo-600;
+  margin-bottom: var(--bs-gutter-y);
 }
 
 .search-form {
@@ -30,7 +28,7 @@ root {
   width: 100%;
   padding-right: 40px;
 
-//  media query
+  //  media query
   @media (min-width: 576px) {
     width: 400px;
   }
@@ -46,7 +44,7 @@ root {
   height: 37px;
   padding: 6px;
 
-  border:solid 1px transparent;
+  border: solid 1px transparent;
   border-radius: 0.375rem;
   background-color: $gray-300;
 }

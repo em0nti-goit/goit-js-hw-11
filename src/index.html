@@ -43,23 +43,37 @@
         </div>
       </nav>
     </header>
-
-    <main>
-      <div class="card-set gallery">
-        <div class="card card-set__item">
-          <img
-            src="./images/logo.png"
-            class="card-img-top"
-            alt="Image"
-            loading="lazy"
-          />
-          <div class="card-body">
-            <p class="card-text"><b>Likes:</b> 100</p>
-            <p class="card-text"><b>Views:</b> 500</p>
-            <p class="card-text"><b>Comments:</b> 20</p>
-            <p class="card-text"><b>Downloads:</b> 50</p>
+    <main class="container container-sm container-md container-lg">
+      <ul class="card-set gallery">
+        <li class="card-set__item">
+          <div class="card">
+            <img
+              src="./images/logo.png"
+              class="card-img-top"
+              alt="Image"
+              loading="lazy"
+              width="150"
+            />
+            <div class="card-body">
+              <p class="card-text"><b>Likes:</b> 100</p>
+              <p class="card-text"><b>Views:</b> 500</p>
+              <p class="card-text"><b>Comments:</b> 20</p>
+              <p class="card-text"><b>Downloads:</b> 50</p>
+            </div>
           </div>
-        </div>
+        </li>
+      </ul>
+
+      <!--      Button load more with spinner-->
+      <div class="d-flex justify-content-center load-more visually-hidden">
+        <button class="btn btn-primary" type="button" disabled>
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Loading...
+        </button>
       </div>
     </main>
     <footer></footer>
