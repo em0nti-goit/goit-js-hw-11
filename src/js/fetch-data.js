@@ -1,5 +1,6 @@
 const API_KEY = '35400410-e14c5a11562853396e2d71b0b';
 const BASE_URL = 'https://pixabay.com/api/';
+export const IMAGES_PER_PAGE = 40;
 
 const urlParam = {
   key: API_KEY,
@@ -8,10 +9,10 @@ const urlParam = {
   q: '',
   safesearch: true,
   page: 1,
-  per_page: 40,
+  per_page: IMAGES_PER_PAGE,
 };
 function setQuery(query) {
-  this.q = encodeURIComponent(query);
+  this.q = query;//encodeURIComponent(query);
 }
 
 function setPages(page) {
@@ -31,8 +32,10 @@ export async function fetchImages(query, page = 1) {
   const options = {
     mode: 'cors',
   };
+
   setUrlParamQ(query);
   setUrlParamPage(page);
+
   const url = createQueryUrl(BASE_URL, urlParam);
   try {
     const response = await fetch(url, options);
