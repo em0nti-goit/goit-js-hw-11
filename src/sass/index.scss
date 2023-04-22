@@ -55,6 +55,16 @@
 //------------- Gallery ----------
 .gallery {
   margin-bottom: var(--section-gap);
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+
+    &:hover {
+      cursor: zoom-in;
+    }
+  }
 }
 
 .card {
@@ -80,4 +90,9 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+//-------------Pagination----------
+.pagination {
+  margin-bottom: var(--section-gap);
 }
