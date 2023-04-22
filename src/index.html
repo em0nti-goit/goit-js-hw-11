@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Pixabay Search</title>
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="js/index.js"></script>
   </head>
   <body>
-    <header class="header shadow">
+    <header class="header shadow sticky-top">
       <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
           <form
@@ -48,26 +49,26 @@
       </nav>
     </header>
     <main class="container container-sm container-md container-lg">
-      <ul class="card-set gallery"></ul>
+      <div class="card-set gallery"></div>
 
       <!--      Button load more with spinner-->
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center pagination">
         <button
-          class="btn btn-primary load-more visually-hidden"
+          class="btn btn-primary pagination__load-more-btn visually-hidden"
           type="button"
-          disabled
         >
           <span
-            class="spinner-border spinner-border-sm"
+            class="spinner-border spinner-border-sm d-none"
             role="status"
             aria-hidden="true"
           ></span>
-          Loading...
+          Load more
         </button>
       </div>
     </main>
     <footer></footer>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <!--    <include src="./partials/example.html"></include>-->
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
