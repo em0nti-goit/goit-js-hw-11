@@ -1,0 +1,29 @@
+/*----------  Card set  ----------*/
+
+.card-set {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set__item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+@include media-breakpoint-up(sm) {
+  .card-set__item {
+    --items: 2;
+  }
+}
+@include media-breakpoint-up(md) {
+  .card-set__item {
+    --items: 3;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .card-set__item {
+    --items: 4;
+  }
+}
+//@include media-breakpoint-up(xl) { ... }

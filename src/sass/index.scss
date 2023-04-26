@@ -1,2 +1,98 @@
-@import './common';
-@import './example';
+//@import '../../node_modules/modern-normalize/modern-normalize.css';
+// Import all of Bootstrap's CSS
+@import '~bootstrap/scss/bootstrap';
+@import 'variable';
+@import 'resets';
+@import 'card-set';
+
+.header {
+  background-color: $indigo-600;
+  margin-bottom: var(--section-gap);
+}
+
+.search-form {
+  width: 100%;
+
+  &__input-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    padding-right: 40px;
+
+    @media (min-width: 576px) {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 576px) {
+    width: auto;
+    margin: auto;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: 37px;
+    height: 37px;
+    padding: 6px;
+
+    border: solid 1px transparent;
+    border-radius: 0.375rem;
+    background-color: $gray-300;
+  }
+}
+
+//------------- Gallery ----------
+.gallery {
+  margin-bottom: var(--section-gap);
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+
+    &:hover {
+      cursor: zoom-in;
+    }
+  }
+}
+
+.card {
+  --bs-card-height: 300px;
+  justify-content: space-between;
+
+  &__img {
+    height: calc(300px - 74px);
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: fit-content;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+//-------------Pagination----------
+.pagination {
+  margin-bottom: var(--section-gap);
+}
