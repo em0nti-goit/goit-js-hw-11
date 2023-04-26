@@ -1,4 +1,8 @@
-// Function for render images
+/**
+ * Function maps the pixabayDataImages array to an array of markup strings using the createGalleryItemMarkup function. Finally, it joins the array into a string and inserts the markup into the node using insertAdjacentHTML.
+ * @param pixabayDataImages - array of objects
+ * @param node
+ */
 export function renderGallery(pixabayDataImages, node) {
   const galleryMarkup = pixabayDataImages
     .map(pixabayDataImage => createGalleryItemMarkup(pixabayDataImage))
