@@ -17,7 +17,7 @@ const refs = {
 const searchState = {
   page: 1,
   query: '',
-  count: 0,
+  count: 0, //count of searches by one query
 };
 
 // Initialize lightbox as null
@@ -41,6 +41,7 @@ function onSearchSubmitHandler(event) {
   }
 
   // Remove event listener and hide load more button if new search is performed
+  // There is new search in the session
   if (searchState.count > 0) {
     refs.loadMoreBtn.removeEventListener('click', onLoadMoreBtnClickHandler);
     refs.loadMoreBtn.classList.add('visually-hidden');
@@ -71,7 +72,8 @@ function onSearchSubmitHandler(event) {
       renderGallery(data.hits, refs.gallery);
 
       lightbox = new SimpleLightbox('.gallery a');
-      if (data.totalHits >= IMAGES_PER_PAGE) {
+
+      if (data.totalHits > IMAGES_PER_PAGE) {
         refs.loadMoreBtn.classList.remove('visually-hidden');
         refs.loadMoreBtn.addEventListener('click', onLoadMoreBtnClickHandler);
       }
